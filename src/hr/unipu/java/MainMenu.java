@@ -49,11 +49,15 @@ public class MainMenu extends JFrame {
         početna.setBounds(22, 23, 453, 80);
         contentPane.add(početna);
 
+
+        //Ovaj tu treba rijesiti
         JButton calculator = new JButton("Calculator");
         calculator.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Calculator calculator = new Calculator();
-                calculator.setVisible(true);
+                Calculator_Layout calculator = new Calculator_Layout();
+
+                //Ovo treba namjestiti
+                //calculator.setVisible(true);
                 dispose();
             }
         });
