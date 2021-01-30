@@ -123,7 +123,7 @@ public class ConverterMenu extends JFrame {
             }
         });
         JBexit.setForeground(Color.black);
-        JBexit.setFont(new Font("Times New Roman", Font.PLAIN, 16));
+        JBexit.setFont(new Font("Times New Roman", Font.PLAIN, 20));
         JBexit.setBackground(new Color(173,216,230));
         JBexit.setBounds(318,507, 135, 33);
         contentPane.add(JBexit);
