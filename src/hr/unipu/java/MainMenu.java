@@ -13,6 +13,8 @@ import javax.swing.UIManager;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
+
 public class MainMenu extends JFrame {
 
     private JPanel contentPane;
@@ -55,10 +57,12 @@ public class MainMenu extends JFrame {
         calculator.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Calculator_Layout calculator = new Calculator_Layout();
-
-                //Ovo treba namjestiti
-                //calculator.setVisible(true);
-                dispose();
+                calculator.setVisible(true);
+                try {
+                    dispose();
+                } catch (Exception exception) {
+                    exception.printStackTrace();
+                }
             }
         });
         calculator.setBackground(new Color(173,216,230));
