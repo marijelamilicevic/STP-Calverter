@@ -1,5 +1,7 @@
 package hr.unipu.java;
 
+import sun.applet.Main;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -199,7 +201,13 @@ public class Calculator_Layout {
         btnBack.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                MainMenu mainMenu = new MainMenu();
+                mainMenu.setVisible(true);
+                try {
+                    dispose();
+                } catch (Exception exception) {
+                    exception.printStackTrace();
+                }
 
             }
         });
@@ -211,5 +219,8 @@ public class Calculator_Layout {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    public void setVisible(boolean b) {
     }
 }
