@@ -52,7 +52,7 @@ public class MainMenu extends JFrame {
         contentPane.add(početna);
 
 
-        //Ovaj tu treba rijesiti
+
         JButton calculator = new JButton("Calculator");
         calculator.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
